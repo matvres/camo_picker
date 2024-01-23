@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'white_armyregular';
+  src: url('/fonts/white_army-webfont.woff2') format('woff2'),
+  url('/fonts/white_army-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  
+}
+
+.analizirana {
+  vertical-align: baseline;
+  max-width: 50%; 
+  display: inline-block; 
+  margin-right: 10%; 
+  border: 5px solid #8A846A;
+}
+
+body {
+  background-image:url("../images/backg_seamless.jpg");
+  color: #B2AF89;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 80px;
+  font-family: white_armyregular;
+  color: #B2AF89;
+}
+
+.glavniDel {
+  margin: auto;
+  max-width: 86.5%;
+  background-color: #505738;
+  opacity: 95%;
+}
+
+.graf_ozadje {
+  opacity: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.obrazec {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.okno {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.slika {
+  border: 5px solid #8A846A;
+  display: inline-block;
+}
+
+.home_link {
+  color: #8A846A;
+}
+.home_link:hover {
+  text-decoration: none;
+  color: #8A846A;
+}
+
+.sredina {
+  text-align: center;
+}
+

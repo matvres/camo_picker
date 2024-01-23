@@ -1,0 +1,18 @@
+
+<div class="obrazec">
+<h3 style="text-align: center;">Naloži sliko za analizo:</h3>
+<br>
+<form method="post" enctype="multipart/form-data" action="/upload">
+    <input type="file" name="image">
+    <input id="subm" type="submit" value="Submit">
+    <br>
+    <br>
+    <div id="messg" style="text-align: center; color: #B2AF89; font-weight: bold;"></div>
+</form>
+</div>
+
+<script type="text/javascript">
+    document.getElementById("subm").addEventListener("click", () => {
+        document.getElementById("messg").innerHTML = "Analiziram sliko, generiram kamuflažne vzorce...";
+    });
+</script>

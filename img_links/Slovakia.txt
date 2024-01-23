@@ -1,0 +1,11 @@
+/images/2/26/Camopedia24.jpg
+http://camopedia.org/image/flag/slovakia.gif
+/images/thumb/d/d4/Czech1.jpg/200px-Czech1.jpg
+/images/thumb/0/07/Czech2.jpg/200px-Czech2.jpg
+/images/thumb/8/84/Slovak5.jpg/200px-Slovak5.jpg
+/images/thumb/0/0f/Czech3.jpg/200px-Czech3.jpg
+/images/thumb/8/8e/Slovak1.jpg/200px-Slovak1.jpg
+/images/thumb/4/44/Slovak2.jpg/200px-Slovak2.jpg
+/images/thumb/4/43/Slovak3.jpg/200px-Slovak3.jpg
+/images/thumb/5/5a/Slovak4.jpg/200px-Slovak4.jpg
+/resources/assets/poweredby_mediawiki_88x31.png

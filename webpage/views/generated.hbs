@@ -1,0 +1,133 @@
+<div class="okno">
+    <br>
+    <div>
+        <h3 style="text-align: center;">Barvna analiza slike</h3>
+    </div>
+    <div style="max-height: 700px;">
+        <img src="{{slika}}" class="analizirana">
+        <div class="graf_ozadje" style="max-width: 25%; display: inline-block">
+            <canvas id="chLine"></canvas> 
+            <br> 
+            <div>
+                {{#each colorPercentageArray as |barva|}}
+                <!--width: {{returnPercentageToDraw barva.percentage}}%-->
+                <div style="widht: 300px; margin-bottom: 5px">
+                    <div style="width: 25px; height: 25px; background-color:{{barva.color}}; display: inline-block"></div>
+                    <span style="color:black; width: 80px; display: inline-block">{{barva.color}}</span>
+                    <span style="color:black; width: 80px; display: inline-block">{{returnPercentage barva.percentage}}%</span>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h3 style="text-align: center;">Računalniško generirani kamuflažni vzorci</h3>
+    </div>
+    <div style="display: inline-block; margin: 10px">
+        <img src="{{digital}}" width="300px" class="slika">
+        <br>
+        <span><b>Vzorec: </b>GREEN BLOTS</span>
+        <br>
+    </div>
+
+    <div style="display: inline-block; margin: 10px">
+        <img src="{{digital2}}" width="300px" class="slika">
+        <br>
+        <span><b>Vzorec: </b>DIGITAL</span>
+        <br>
+    </div>
+    
+    <div style="display: inline-block; margin: 10px">
+        <img src="{{digital3}}" width="300px" class="slika">
+        <br>
+        <span><b>Vzorec: </b>VODKA</span>
+        <br>
+    </div>
+    
+    <div style="display: inline-block; margin: 10px">
+        <img src="{{voro1}}" width="300px" class="slika">
+        <br>
+        <span><b>Vzorec: </b>VORONOI-EUC</span>
+        <br>
+    </div>
+    
+    <div style="display: inline-block; margin: 10px">
+        <img src="{{voro2}}" width="300px" class="slika">
+        <br>
+        <span><b>Vzorec: </b>VORONOI-MAN</span>
+        <br>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <h3 style="text-align: center;">Obstoječi kamuflažni vzorci, izbrani na podlagi analize podobnosti razmerij barv</h3>
+    </div>
+
+    {{#each bestCamos as |bestCamo|}}
+        <div style="display: inline-block; margin: 10px">
+            <img src="{{bestCamo.filePath}}" width="300px" class="slika">
+            <br>
+            <span><b>Država: </b>{{nameToCountry bestCamo.filePath}}</span>
+            <br>
+            {{{checkFamily bestCamo.family}}}
+        </div>
+    {{/each}}
+
+</div>
+
+
+<div class="collapse" id="oznake_osi">{{oznaka}}</div>
+<div class="collapse" id="oznake_vrednosti">{{podatki}}</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+    window.onload = function() {
+    var osi;
+    var podatki;
+
+    var osi_html;
+    var podatki_html;
+
+    osi_html = document.getElementById("oznake_osi");
+    podatki_html = document.getElementById("oznake_vrednosti");
+
+    osi = osi_html.innerHTML;
+    podatki = podatki_html.innerHTML;
+
+    osi = JSON.parse(osi);
+    podatki = JSON.parse(podatki);
+
+    var colors = osi;
+    var chartData = {
+        labels: osi,
+        datasets: [{
+            label: 'Prevladujoce barve',
+            data: podatki,
+            backgroundColor: osi,
+            borderColor: "#B2AF89",
+            borderWidth: 2,
+            pointBackgroundColor: "#B2AF89"
+        }]
+    };
+
+    var chLine = document.getElementById("chLine");
+    if (chLine) {
+        new Chart(chLine, {
+            type: 'pie',
+            data: chartData,
+            options: {
+                plugins: {
+                    legend: false,
+                    tooltip: false
+                }
+            }
+        });
+    }
+};
+</script>

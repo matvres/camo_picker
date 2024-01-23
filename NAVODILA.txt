@@ -1,0 +1,46 @@
+NAVODILA ZA INŠTALACIJO:
+========================
+
+1. Za začetek je potrebno namestiti NodeJS in npm. Prenesemo ju iz sledečega naslova:
+
+https://nodejs.org/en/download/
+
+(https://www.npmjs.com/get-npm)
+
+2. Na računalnik je potrebno namestiti Python, s sledečega naslova:
+Potrebno je namestiti tudi 'pip', med inštalacijo Python-a.
+
+https://www.python.org/downloads/
+
+3. Po inštalaciji zgornjih potrebščin, naj uporabnik se uporabnik z ukazno konzolo premakne v direktorij "CamoPicker" in požene:
+
+    install.bat (v kolikor inštalacija poteka na sistemu Windows)
+
+    oz.
+
+    install.sh (v kolikor inštalacija poteka na sistemu Linux)
+
+4. Po opravljenem zagonu install.* datoteke, naj uporabnik ostane v direktoriju "CamoPicker" in požene še:
+
+    test.bat (v kolikor inštalacija poteka na sistemu Windows)
+
+    oz.
+
+    test.sh (v kolikor inštalacija poteka na sistemu Linux)
+
+Zgornja test skripta požene test.py, ki preveri ali so vse potrebne knjižnice za 
+python in za program Camopicker uspešno nameščene. V kolikor test.py javi
+napake za manjkajoče knjižnice, naj uporabnik le te prenese oz. inštalira ročno.
+
+NAVODILA ZA ZAGON PROGRAMA CAMOPICKER:
+======================================
+
+Po uspešni inštalaciji, se uporabnik znotraj konzole premakne v direktorij "CamoPicker\webpage".
+
+V tem direktoriju nato uporabnik v ukazno konzolo napiše ukaz: npm start
+
+V kolikor se pojavijo napake, da modul npm ne obstaja, naj uporabnik napiše ukza: npm install
+
+V kolikor ni vrnjenih napak, se je orodje postavilo na spletnem naslovu: http://localhost:3000/
+
+Na naslovu uporabnik nato naloži sliko za analizo.
